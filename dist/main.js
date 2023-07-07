@@ -1,0 +1,1 @@
+(()=>{"use strict";!function(){const o=document.querySelector("#content");console.log(o)}()})();
