@@ -7,6 +7,7 @@ import footerFunc from "./footer";
 export default function pageLoad() {
     navbar();
     homeContent();
+    menuContent();
     footerFunc();
 
     const homeLinkBtn = document.querySelector(".homeLink");
@@ -14,8 +15,10 @@ export default function pageLoad() {
     const contactLinkBtn = document.querySelector(".homeLink");
 
     const homeContainer = document.querySelector(".homeContainer");
-    // homeContainer.classList.add("hidden");
+    homeContainer.classList.add("hidden");
+
     homeLinkBtn.addEventListener("click", (event) => {
         // homeContainer.classList.add("hidden");
     });
+    // console.log(homeLinkBtn);
 }

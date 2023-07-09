@@ -61,7 +61,7 @@ export default function homeContent() {
     homeContainer.setAttribute("class", "homeContainer");
     restaurantPic.setAttribute("class", "restaurantPic");
 
-    restaurantName.textContent = "Stan's All You Can Eat";
+    restaurantName.textContent = "Stan's Delicious";
     aboutUsH2.textContent = "About Us";
     aboutUsP.textContent = smallP();
     hourH2.textContent = "Hours of Operation";
@@ -72,18 +72,7 @@ export default function homeContent() {
     listOfHours5.textContent = " Thursday: 8am - 11pm";
     listOfHours6.textContent = " Friday: 8am - 11pm";
     listOfHours7.textContent = " Saturday: 8am - 11pm";
-    // listOfHours8.textContent = " Sunday: 8am - 11pm";
-    // listOfHours.textContent = " Sunday: 8am - 11pm";
+
     locationH2.textContent = "Location";
     locationP.textContent = `1234 Elm Street Cityville, Stateborough 56789 Countryland`;
 }
-
-/**
- h1
- div => restaurant pic,
- div-about-us = h2, p,
- div-hour of operation
- div => location
-
- 
- */

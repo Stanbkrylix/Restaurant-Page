@@ -55,3 +55,6 @@ img {
 .hidden {
     display: none;
 }
+.underlined {
+    border-bottom: solid 3px black;
+}
