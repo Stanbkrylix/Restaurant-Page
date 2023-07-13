@@ -19,7 +19,7 @@ const navbar = function () {
     contact.appendChild(contactLink);
 
     homeLink.setAttribute("class", "homeLink");
-    menuLink.setAttribute("class", "MenuLink");
+    menuLink.setAttribute("class", "menuLink");
     contactLink.setAttribute("class", "contactLink");
 
     homeLink.textContent = "Home";
