@@ -20,9 +20,9 @@ export default function pageLoad() {
     const contactContainer = document.querySelector(".contactContainer");
 
     // console.log(contactContainer);
-    menuContainer.classList.add("hidden");
+    menuContainer.classList.remove("hidden");
     contactContainer.classList.add("hidden");
-    homeContainer.classList.remove("hidden");
+    homeContainer.classList.add("hidden");
 
     homeLinkBtn.addEventListener("click", (event) => {
         homeContainer.classList.remove("hidden");

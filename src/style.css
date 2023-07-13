@@ -2,7 +2,7 @@
     #285430;
 */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap");
-body {
+* {
     margin: 0;
     padding: 0;
 }
@@ -17,6 +17,7 @@ body {
     justify-content: center;
     border-bottom: solid 1px #091d11;
     margin-bottom: 20px;
+    padding: 20px;
     /* width: 1000px; */
 }
 
@@ -79,8 +80,37 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* text-align: center; */
 }
-
+.menuContainer h1 {
+    margin: 10px 0;
+}
+.menuContainer h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+.cardMenuDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.drinkCard {
+    border: 1px solid black;
+    width: 20%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    /* width: auto; */
+}
+.drinkDescDiv {
+    width: 100%;
+}
+.menuImage {
+    width: 100%;
+}
 /* ================================================================ */
 /* Contact Section */
 .contactContainer {

@@ -1,4 +1,8 @@
-// import coffee from "./"
+import Oleato from "./Oleato.jpg";
+import coffees from "./hot-coffees.jpg";
+import tea from "./Tea.jpg";
+import coldDrinks from "./cold-drinks.jpg";
+
 export default function menuContent() {
     const content = document.querySelector("#content");
 
@@ -20,32 +24,139 @@ export default function menuContent() {
 
     // ================= drinklist =============================
     const drinkListDiv = document.createElement("div");
-
     const drinkCardMenus = document.createElement("div");
+    drinkCardMenus.setAttribute("class", "cardMenuDiv");
+
+    // cards
     const drinkCard1 = document.createElement("div");
+    drinkCard1.setAttribute("class", "drinkCard drinkCard1");
     const drinkCard2 = document.createElement("div");
+    drinkCard2.setAttribute("class", "drinkCard drinkCard2");
     const drinkCard3 = document.createElement("div");
+    drinkCard3.setAttribute("class", "drinkCard drinkCard2");
     const drinkCard4 = document.createElement("div");
+    drinkCard4.setAttribute("class", "drinkCard drinkCard4");
 
+    // descriptionDivs
     const drinkDescriptionDiv = document.createElement("div");
-    const drinkMenuImageDiv = document.createElement("div");
+    drinkDescriptionDiv.setAttribute("class", "drinkDescDiv");
 
+    const drinkDescriptionDiv2 = document.createElement("div");
+    drinkDescriptionDiv2.setAttribute("class", "drinkDescDiv");
+
+    const drinkDescriptionDiv3 = document.createElement("div");
+    drinkDescriptionDiv3.setAttribute("class", "drinkDescDiv");
+
+    const drinkDescriptionDiv4 = document.createElement("div");
+    drinkDescriptionDiv4.setAttribute("class", "drinkDescDiv");
+
+    // inside of description
+    const drinkName = document.createElement("h2");
+    const drinkPrice = document.createElement("h2");
+    const drinkDescription = document.createElement("p");
+
+    const drinkName2 = document.createElement("h2");
+    const drinkPrice2 = document.createElement("h2");
+    const drinkDescription2 = document.createElement("p");
+
+    const drinkName3 = document.createElement("h2");
+    const drinkPrice3 = document.createElement("h2");
+    const drinkDescription3 = document.createElement("p");
+
+    const drinkName4 = document.createElement("h2");
+    const drinkPrice4 = document.createElement("h2");
+    const drinkDescription4 = document.createElement("p");
+
+    drinkCard1.appendChild(drinkDescriptionDiv);
+    drinkCard2.appendChild(drinkDescriptionDiv2);
+    drinkCard3.appendChild(drinkDescriptionDiv3);
+    drinkCard4.appendChild(drinkDescriptionDiv4);
+
+    // first card
+    drinkDescriptionDiv.appendChild(drinkName);
+    drinkDescriptionDiv.appendChild(drinkPrice);
+    drinkDescriptionDiv.appendChild(drinkDescription);
+    drinkName.textContent = "Oleato";
+    drinkPrice.textContent = "$4";
+    drinkDescription.textContent = "Place holder";
+
+    // second card
+    drinkDescriptionDiv2.appendChild(drinkName2);
+    drinkDescriptionDiv2.appendChild(drinkPrice2);
+    drinkDescriptionDiv2.appendChild(drinkDescription2);
+    drinkName2.textContent = "Coffee";
+    drinkPrice2.textContent = "$2";
+    drinkDescription2.textContent = "Place holder";
+
+    // third card
+    drinkDescriptionDiv3.appendChild(drinkName3);
+    drinkDescriptionDiv3.appendChild(drinkPrice3);
+    drinkDescriptionDiv3.appendChild(drinkDescription3);
+    drinkName3.textContent = "Tea";
+    drinkPrice3.textContent = "$2";
+    drinkDescription3.textContent = "Place holder";
+
+    // fourth card
+    drinkDescriptionDiv4.appendChild(drinkName4);
+    drinkDescriptionDiv4.appendChild(drinkPrice4);
+    drinkDescriptionDiv4.appendChild(drinkDescription4);
+    drinkName4.textContent = "Cold Drinks";
+    drinkPrice4.textContent = "$5";
+    drinkDescription4.textContent = "Place holder";
+
+    // creating images
+    const myOleato = new Image();
+    myOleato.src = Oleato;
+
+    const myCoffees = new Image();
+    myCoffees.src = coffees;
+
+    const myTea = new Image();
+    myTea.src = tea;
+
+    const myColdDrinks = new Image();
+    myColdDrinks.src = coldDrinks;
+
+    // for Image
+    const drinkMenuImageDiv = document.createElement("div");
+    const drinkMenuImageDiv2 = document.createElement("div");
+    const drinkMenuImageDiv3 = document.createElement("div");
+    const drinkMenuImageDiv4 = document.createElement("div");
+
+    drinkMenuImageDiv.setAttribute("class", "menuImage");
+    drinkMenuImageDiv2.setAttribute("class", "menuImage");
+    drinkMenuImageDiv3.setAttribute("class", "menuImage");
+    drinkMenuImageDiv4.setAttribute("class", "menuImage");
+
+    drinkCard1.appendChild(drinkMenuImageDiv);
+    drinkCard2.appendChild(drinkMenuImageDiv2);
+    drinkCard3.appendChild(drinkMenuImageDiv3);
+    drinkCard4.appendChild(drinkMenuImageDiv4);
+
+    drinkMenuImageDiv.appendChild(myOleato);
+    drinkMenuImageDiv2.appendChild(myCoffees);
+    drinkMenuImageDiv3.appendChild(myTea);
+    drinkMenuImageDiv4.appendChild(myColdDrinks);
+
+    // Card menu divs
     drinkDiv.appendChild(drinkCardMenus);
     drinkCardMenus.appendChild(drinkCard1);
     drinkCardMenus.appendChild(drinkCard2);
     drinkCardMenus.appendChild(drinkCard3);
     drinkCardMenus.appendChild(drinkCard4);
 
+    // Cards with 2 divs
     drinkCard1.appendChild(drinkDescriptionDiv);
     drinkCard1.appendChild(drinkMenuImageDiv);
 
-    drinkDescriptionDiv.textContent = "description";
-    drinkMenuImageDiv.textContent = "Image";
+    drinkCard2.appendChild(drinkDescriptionDiv2);
+    drinkCard2.appendChild(drinkMenuImageDiv2);
 
-    // drinkList1.textContent = "Oleato";
-    // drinkList2.textContent = "Coffees";
-    // drinkList3.textContent = "Tea";
-    // drinkList4.textContent = "Cold drinks";
+    drinkCard3.appendChild(drinkDescriptionDiv3);
+    drinkCard3.appendChild(drinkMenuImageDiv3);
+
+    drinkCard4.appendChild(drinkDescriptionDiv4);
+    drinkCard4.appendChild(drinkMenuImageDiv4);
 
     //============ food section ======================
     const foodDiv = document.createElement("div");
