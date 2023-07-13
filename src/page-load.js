@@ -21,8 +21,8 @@ export default function pageLoad() {
 
     // console.log(contactContainer);
     menuContainer.classList.add("hidden");
-    // contactContainer.classList.add("hidden");
-    homeContainer.classList.add("hidden");
+    contactContainer.classList.add("hidden");
+    homeContainer.classList.remove("hidden");
 
     homeLinkBtn.addEventListener("click", (event) => {
         homeContainer.classList.remove("hidden");

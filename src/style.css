@@ -12,23 +12,18 @@ body {
     justify-content: center;
     align-items: center;
 }
-img {
-    width: 100%;
-}
-.homeContainer {
-    width: 80%;
-}
 .nav {
     display: flex;
     justify-content: center;
     border-bottom: solid 1px #091d11;
     margin-bottom: 20px;
+    /* width: 1000px; */
 }
 
 .nav ul {
     display: flex;
     list-style-type: none;
-    width: 50%;
+    width: 1000px;
     justify-content: space-between;
 }
 
@@ -43,16 +38,55 @@ img {
     color: white;
     cursor: pointer;
 }
+
+/* ============================================================== */
+/*Home Section  */
+
+img {
+    width: 100%;
+}
+.homeContainer {
+    width: 1000px;
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.homeContainer h1 {
+    text-align: center;
+}
+
+.hoursOfOp {
+    text-align: center;
+}
+.location {
+    text-align: center;
+}
+
 .hoursOfOp ul {
     list-style-type: none;
 }
 .hoursOfOp ul li {
     margin-bottom: 5px;
 }
-.contactContainer {
+
+/* ================================================================== */
+/* Menu Section */
+.menuContainer {
+    border: 1px solid black;
+    width: 1000px;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    align-items: center;
+}
+
+/* ================================================================ */
+/* Contact Section */
+.contactContainer {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
 }
 .contactContainer h1 {
     align-self: center;
@@ -71,7 +105,6 @@ img {
 }
 .image-div {
     width: 20%;
-    /* height: 100px; */
     border-radius: 5px;
 }
 .image-div img {
@@ -94,10 +127,9 @@ img {
     color: #091d11;
     cursor: pointer;
 }
+
 .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 .hidden {

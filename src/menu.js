@@ -1,5 +1,7 @@
+// import coffee from "./"
 export default function menuContent() {
     const content = document.querySelector("#content");
+
     const menuContainer = document.createElement("div");
     const menuH1 = document.createElement("h1");
     menuContainer.setAttribute("class", "menuContainer");
@@ -12,33 +14,44 @@ export default function menuContent() {
     const drinkDiv = document.createElement("div");
     const drinkH2 = document.createElement("h2");
     menuContainer.appendChild(drinkDiv);
+
     drinkDiv.appendChild(drinkH2);
     drinkH2.textContent = "Drinks";
 
     // ================= drinklist =============================
     const drinkListDiv = document.createElement("div");
-    const drinkUl = document.createElement("ul");
-    const drinkList1 = document.createElement("li");
-    const drinkList2 = document.createElement("li");
-    const drinkList3 = document.createElement("li");
-    const drinkList4 = document.createElement("li");
 
-    drinkDiv.appendChild(drinkUl);
-    drinkUl.appendChild(drinkList1);
-    drinkUl.appendChild(drinkList2);
-    drinkUl.appendChild(drinkList3);
-    drinkUl.appendChild(drinkList4);
+    const drinkCardMenus = document.createElement("div");
+    const drinkCard1 = document.createElement("div");
+    const drinkCard2 = document.createElement("div");
+    const drinkCard3 = document.createElement("div");
+    const drinkCard4 = document.createElement("div");
 
-    drinkList1.textContent = "Oleato";
-    drinkList2.textContent = "Hot Coffees";
-    drinkList3.textContent = "Hot Drinks";
-    drinkList4.textContent = "Cold drinks";
+    const drinkDescriptionDiv = document.createElement("div");
+    const drinkMenuImageDiv = document.createElement("div");
+
+    drinkDiv.appendChild(drinkCardMenus);
+    drinkCardMenus.appendChild(drinkCard1);
+    drinkCardMenus.appendChild(drinkCard2);
+    drinkCardMenus.appendChild(drinkCard3);
+    drinkCardMenus.appendChild(drinkCard4);
+
+    drinkCard1.appendChild(drinkDescriptionDiv);
+    drinkCard1.appendChild(drinkMenuImageDiv);
+
+    drinkDescriptionDiv.textContent = "description";
+    drinkMenuImageDiv.textContent = "Image";
+
+    // drinkList1.textContent = "Oleato";
+    // drinkList2.textContent = "Coffees";
+    // drinkList3.textContent = "Tea";
+    // drinkList4.textContent = "Cold drinks";
 
     //============ food section ======================
     const foodDiv = document.createElement("div");
     const foodH2 = document.createElement("h2");
     menuContainer.appendChild(foodDiv);
-    drinkDiv.appendChild(foodH2);
+    foodDiv.appendChild(foodH2);
     foodH2.textContent = "Food";
 
     // ================= foodlist =============================

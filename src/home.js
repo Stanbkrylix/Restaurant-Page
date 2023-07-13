@@ -3,7 +3,7 @@ import smallP from "./smallAboutUsParagraph";
 import steak from "./meat-with-vegetables-2.0.png";
 
 export default function homeContent() {
-    const pageContent = document.querySelector("#content");
+    const homePageContent = document.querySelector("#content");
 
     const homeContainer = document.createElement("div");
     const restaurantName = document.createElement("h1");
@@ -26,14 +26,15 @@ export default function homeContent() {
     const location = document.createElement("div");
     const locationH2 = document.createElement("h2");
     const locationP = document.createElement("p");
-    console.log(pageContent);
+
+    console.log(homePageContent);
 
     const mySteak = new Image();
     mySteak.src = steak;
     restaurantPic.appendChild(mySteak);
 
     hoursOfOp.setAttribute("class", "hoursOfOp");
-    pageContent.appendChild(homeContainer);
+    homePageContent.appendChild(homeContainer);
 
     homeContainer.appendChild(restaurantName);
     homeContainer.appendChild(restaurantPic);
@@ -60,6 +61,7 @@ export default function homeContent() {
 
     homeContainer.setAttribute("class", "homeContainer");
     restaurantPic.setAttribute("class", "restaurantPic");
+    location.setAttribute("class", "location");
 
     restaurantName.textContent = "Stan's Delicious";
     aboutUsH2.textContent = "About Us";
