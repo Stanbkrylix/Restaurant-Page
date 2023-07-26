@@ -3,6 +3,11 @@ import coffees from "./hot-coffees.jpg";
 import tea from "./Tea.jpg";
 import coldDrinks from "./cold-drinks.jpg";
 
+import bakery from "./Bakery.jpg";
+import breakfast from "./Breakfast.jpg";
+import lunch from "./lunch.jpg";
+import steak from "./Steak-Unsplash.jpg";
+
 export default function menuContent() {
     const content = document.querySelector("#content");
 
@@ -158,6 +163,39 @@ export default function menuContent() {
     drinkCard4.appendChild(drinkDescriptionDiv4);
     drinkCard4.appendChild(drinkMenuImageDiv4);
 
+    const drinkObject = {
+        menuContainer,
+        drinkDiv,
+        drinkH2,
+        drinkCardMenus,
+        drinkCard1,
+        drinkCard2,
+        drinkCard3,
+        drinkCard4,
+        drinkDescriptionDiv,
+        drinkDescriptionDiv2,
+        drinkDescriptionDiv3,
+        drinkDescriptionDiv4,
+        drinkName,
+        drinkName2,
+        drinkName3,
+        drinkName4,
+        drinkPrice,
+        drinkPrice2,
+        drinkPrice3,
+        drinkPrice4,
+        drinkDescription,
+        drinkDescription2,
+        drinkDescription3,
+        drinkDescription4,
+        myOleato,
+        myCoffees,
+        myTea,
+        myColdDrinks,
+    };
+
+    console.log(drinkObject);
+
     //============ food section ======================
 
     const foodDiv = document.createElement("div");
@@ -188,16 +226,16 @@ export default function menuContent() {
 
     // description divs
     const foodDescriptionDiv = document.createElement("div");
-    drinkDescriptionDiv.setAttribute("class", "descDiv");
+    foodDescriptionDiv.setAttribute("class", "descDiv");
 
     const foodDescriptionDiv2 = document.createElement("div");
-    drinkDescriptionDiv2.setAttribute("class", "descDiv");
+    foodDescriptionDiv2.setAttribute("class", "descDiv");
 
     const foodDescriptionDiv3 = document.createElement("div");
-    drinkDescriptionDiv3.setAttribute("class", "descDiv");
+    foodDescriptionDiv3.setAttribute("class", "descDiv");
 
     const foodDescriptionDiv4 = document.createElement("div");
-    drinkDescriptionDiv4.setAttribute("class", "descDiv");
+    foodDescriptionDiv4.setAttribute("class", "descDiv");
 
     // inside of description
     const foodName = document.createElement("h2");
@@ -253,16 +291,59 @@ export default function menuContent() {
     foodPrice4.textContent = "$5";
     foodDescription4.textContent = "Place holder";
 
-    // foodDiv.appendChild(foodUl);
-    // foodUl.appendChild(foodList1);
-    // foodUl.appendChild(foodList2);
-    // foodUl.appendChild(foodList3);
-    // foodUl.appendChild(foodList4);
+    // creating images
+    const myBakery = new Image();
+    myBakery.src = bakery;
 
-    // foodList1.textContent = "Hot Breakfast";
-    // foodList2.textContent = "Lunch";
-    // foodList3.textContent = "Bakery";
-    // foodList4.textContent = "Oatmeal & Yogurt";
+    const myBreakFast = new Image();
+    myBreakFast.src = breakfast;
+
+    const myLunch = new Image();
+    myLunch.src = lunch;
+
+    const mySteak = new Image();
+    mySteak.src = steak;
+
+    // image divs
+    const foodMenuImageDiv = document.createElement("div");
+    const foodMenuImageDiv2 = document.createElement("div");
+    const foodMenuImageDiv3 = document.createElement("div");
+    const foodMenuImageDiv4 = document.createElement("div");
+
+    foodMenuImageDiv.setAttribute("class", "menuImage");
+    foodMenuImageDiv2.setAttribute("class", "menuImage");
+    foodMenuImageDiv3.setAttribute("class", "menuImage");
+    foodMenuImageDiv4.setAttribute("class", "menuImage");
+
+    foodCard1.appendChild(foodMenuImageDiv);
+    foodCard2.appendChild(foodMenuImageDiv2);
+    foodCard3.appendChild(foodMenuImageDiv3);
+    foodCard4.appendChild(foodMenuImageDiv4);
+
+    foodMenuImageDiv.appendChild(myBakery);
+    foodMenuImageDiv2.appendChild(myBreakFast);
+    foodMenuImageDiv3.appendChild(myLunch);
+    foodMenuImageDiv4.appendChild(mySteak);
+
+    // Card menu divs
+    foodDiv.appendChild(foodMenuDiv);
+    foodMenuDiv.appendChild(foodCard1);
+    foodMenuDiv.appendChild(foodCard2);
+    foodMenuDiv.appendChild(foodCard3);
+    foodMenuDiv.appendChild(foodCard4);
+
+    // Cards with 2 divs
+    foodCard1.appendChild(foodDescriptionDiv);
+    foodCard1.appendChild(foodMenuImageDiv);
+
+    foodCard2.appendChild(foodDescriptionDiv2);
+    foodCard2.appendChild(foodMenuImageDiv2);
+
+    foodCard3.appendChild(foodDescriptionDiv3);
+    foodCard3.appendChild(foodMenuImageDiv3);
+
+    foodCard4.appendChild(foodDescriptionDiv4);
+    foodCard4.appendChild(foodMenuImageDiv4);
 
     //============ Merchandise section ======================
     const merchandiseDiv = document.createElement("div");
