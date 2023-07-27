@@ -1,4 +1,4 @@
-import steak from "./person-cooking-meats.png";
+import steak from "../src/image/person-cooking-meats.png";
 
 export default function contactContent() {
     const content = document.querySelector("#content");

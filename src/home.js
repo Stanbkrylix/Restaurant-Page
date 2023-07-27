@@ -1,6 +1,6 @@
 // import "./style.css";
 import smallP from "./smallAboutUsParagraph";
-import steak from "./meat-with-vegetables-2.0.png";
+import steak from "../src/image/meat-with-vegetables-2.0.png";
 
 export default function homeContent() {
     const homePageContent = document.querySelector("#content");

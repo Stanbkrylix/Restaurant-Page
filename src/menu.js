@@ -1,12 +1,12 @@
-import Oleato from "./Oleato.jpg";
-import coffees from "./hot-coffees.jpg";
-import tea from "./Tea.jpg";
-import coldDrinks from "./cold-drinks.jpg";
+import Oleato from "../src/image/Oleato.jpg";
+import coffees from "../src/image/hot-coffees.jpg";
+import tea from "../src/image/Tea.jpg";
+import coldDrinks from "../src/image/cold-drinks.jpg";
 
-import bakery from "./Bakery.jpg";
-import breakfast from "./Breakfast.jpg";
-import lunch from "./lunch.jpg";
-import steak from "./Steak-Unsplash.jpg";
+import bakery from "../src/image/Bakery.jpg";
+import breakfast from "../src/image/Breakfast.jpg";
+import lunch from "../src/image/lunch.jpg";
+import steak from "../src/image/Steak-Unsplash.jpg";
 
 const drinkContentFunction = function (object) {
     // ===================== drinks ============================
