@@ -25,7 +25,6 @@ const navbar = function () {
     homeLink.textContent = "Home";
     menuLink.textContent = "Menu";
     contactLink.textContent = "Contact";
-    console.log(nav);
 };
 
 export { navbar };
