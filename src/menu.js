@@ -8,8 +8,9 @@ import breakfast from "./Breakfast.jpg";
 import lunch from "./lunch.jpg";
 import steak from "./Steak-Unsplash.jpg";
 
-const contentFunction = function (object) {
+const drinkContentFunction = function (object) {
     // ===================== drinks ============================
+    object.menuContainer.appendChild(object.drinkDiv);
     object.drinkDiv.appendChild(object.drinkH2);
     object.drinkH2.textContent = "Drinks";
 
@@ -39,9 +40,12 @@ const contentFunction = function (object) {
     object.drinkDescriptionDiv.appendChild(object.drinkName);
     object.drinkDescriptionDiv.appendChild(object.drinkPrice);
     object.drinkDescriptionDiv.appendChild(object.drinkDescription);
-    object.drinkName.textContent = "Oleato";
+    object.drinkName.textContent = "Stan's Coffee";
     object.drinkPrice.textContent = "$4";
-    object.drinkDescription.textContent = "Place holder";
+    object.drinkDescription.textContent = ` 
+     Stan's coffee is often enjoyed with various additions like milk,
+     sugar, or flavored syrups, making it a versatile and beloved 
+     in our restaurant enjoyed by people all from diferent spots in the world.`;
 
     // second card
     object.drinkDescriptionDiv2.appendChild(object.drinkName2);
@@ -49,7 +53,10 @@ const contentFunction = function (object) {
     object.drinkDescriptionDiv2.appendChild(object.drinkDescription2);
     object.drinkName2.textContent = "Coffee";
     object.drinkPrice2.textContent = "$2";
-    object.drinkDescription2.textContent = "Place holder";
+    object.drinkDescription2.textContent = `
+     The original coffee is typically served hot and has a rich, dark color with a pleasant and energizing taste.
+     The flavor can vary depending on the type of coffee bean, roast level, and brewing method used.
+    `;
 
     // third card
     object.drinkDescriptionDiv3.appendChild(object.drinkName3);
@@ -57,7 +64,10 @@ const contentFunction = function (object) {
     object.drinkDescriptionDiv3.appendChild(object.drinkDescription3);
     object.drinkName3.textContent = "Tea";
     object.drinkPrice3.textContent = "$2";
-    object.drinkDescription3.textContent = "Place holder";
+    object.drinkDescription3.textContent = `
+    from robust and earthy to delicate and floral, 
+    depending on the type and preparation. Enjoyed our tea hot or cold.
+    `;
 
     // fourth card
     object.drinkDescriptionDiv4.appendChild(object.drinkName4);
@@ -65,7 +75,10 @@ const contentFunction = function (object) {
     object.drinkDescriptionDiv4.appendChild(object.drinkDescription4);
     object.drinkName4.textContent = "Cold Drinks";
     object.drinkPrice4.textContent = "$5";
-    object.drinkDescription4.textContent = "Place holder";
+    object.drinkDescription4.textContent = `
+    Our cold drinks menus contains: iced coffee, ice tea,lemonade
+    soft drinks, ice latte, smoothies,cold water infusion, and milk shakes.
+    `;
 
     // creating images
     object.myOleato.src = Oleato;
@@ -109,6 +122,7 @@ const contentFunction = function (object) {
 
     object.drinkCard4.appendChild(object.drinkDescriptionDiv4);
     object.drinkCard4.appendChild(object.drinkMenuImageDiv4);
+    console.log(object.drinkCardMenus);
 };
 
 export default function menuContent() {
@@ -125,38 +139,22 @@ export default function menuContent() {
     // // ===================== drinks ============================
     const drinkDiv = document.createElement("div");
     const drinkH2 = document.createElement("h2");
-    // menuContainer.appendChild(drinkDiv);
-
-    // drinkDiv.appendChild(drinkH2);
-    // drinkH2.textContent = "Drinks";
 
     // // ================= drinklist =============================
     const drinkListDiv = document.createElement("div");
     const drinkCardMenus = document.createElement("div");
-    // drinkCardMenus.setAttribute("class", "cardMenuDiv");
 
     // // cards
     const drinkCard1 = document.createElement("div");
-    // drinkCard1.setAttribute("class", "card drinkCard1");
     const drinkCard2 = document.createElement("div");
-    // drinkCard2.setAttribute("class", "card drinkCard2");
     const drinkCard3 = document.createElement("div");
-    // drinkCard3.setAttribute("class", "card drinkCard2");
     const drinkCard4 = document.createElement("div");
-    // drinkCard4.setAttribute("class", "card drinkCard4");
 
     // // descriptionDivs
     const drinkDescriptionDiv = document.createElement("div");
-    // drinkDescriptionDiv.setAttribute("class", "descDiv");
-
     const drinkDescriptionDiv2 = document.createElement("div");
-    // drinkDescriptionDiv2.setAttribute("class", "descDiv");
-
     const drinkDescriptionDiv3 = document.createElement("div");
-    // drinkDescriptionDiv3.setAttribute("class", "descDiv");
-
     const drinkDescriptionDiv4 = document.createElement("div");
-    // drinkDescriptionDiv4.setAttribute("class", "descDiv");
 
     // // inside of description
     const drinkName = document.createElement("h2");
@@ -175,55 +173,11 @@ export default function menuContent() {
     const drinkPrice4 = document.createElement("h2");
     const drinkDescription4 = document.createElement("p");
 
-    // drinkCard1.appendChild(drinkDescriptionDiv);
-    // drinkCard2.appendChild(drinkDescriptionDiv2);
-    // drinkCard3.appendChild(drinkDescriptionDiv3);
-    // drinkCard4.appendChild(drinkDescriptionDiv4);
-
-    // // first card
-    // drinkDescriptionDiv.appendChild(drinkName);
-    // drinkDescriptionDiv.appendChild(drinkPrice);
-    // drinkDescriptionDiv.appendChild(drinkDescription);
-    // drinkName.textContent = "Oleato";
-    // drinkPrice.textContent = "$4";
-    // drinkDescription.textContent = "Place holder";
-
-    // // second card
-    // drinkDescriptionDiv2.appendChild(drinkName2);
-    // drinkDescriptionDiv2.appendChild(drinkPrice2);
-    // drinkDescriptionDiv2.appendChild(drinkDescription2);
-    // drinkName2.textContent = "Coffee";
-    // drinkPrice2.textContent = "$2";
-    // drinkDescription2.textContent = "Place holder";
-
-    // // third card
-    // drinkDescriptionDiv3.appendChild(drinkName3);
-    // drinkDescriptionDiv3.appendChild(drinkPrice3);
-    // drinkDescriptionDiv3.appendChild(drinkDescription3);
-    // drinkName3.textContent = "Tea";
-    // drinkPrice3.textContent = "$2";
-    // drinkDescription3.textContent = "Place holder";
-
-    // // fourth card
-    // drinkDescriptionDiv4.appendChild(drinkName4);
-    // drinkDescriptionDiv4.appendChild(drinkPrice4);
-    // drinkDescriptionDiv4.appendChild(drinkDescription4);
-    // drinkName4.textContent = "Cold Drinks";
-    // drinkPrice4.textContent = "$5";
-    // drinkDescription4.textContent = "Place holder";
-
     // // creating images
     const myOleato = new Image();
-    // myOleato.src = Oleato;
-
     const myCoffees = new Image();
-    // myCoffees.src = coffees;
-
     const myTea = new Image();
-    // myTea.src = te
-
     const myColdDrinks = new Image();
-    // myColdDrinks.src = coldDrinks;
 
     // // for Image
     const drinkMenuImageDiv = document.createElement("div");
@@ -231,42 +185,8 @@ export default function menuContent() {
     const drinkMenuImageDiv3 = document.createElement("div");
     const drinkMenuImageDiv4 = document.createElement("div");
 
-    // drinkMenuImageDiv.setAttribute("class", "menuImage");
-    // drinkMenuImageDiv2.setAttribute("class", "menuImage");
-    // drinkMenuImageDiv3.setAttribute("class", "menuImage");
-    // drinkMenuImageDiv4.setAttribute("class", "menuImage");
-
-    // drinkCard1.appendChild(drinkMenuImageDiv);
-    // drinkCard2.appendChild(drinkMenuImageDiv2);
-    // drinkCard3.appendChild(drinkMenuImageDiv3);
-    // drinkCard4.appendChild(drinkMenuImageDiv4);
-
-    // drinkMenuImageDiv.appendChild(myOleato);
-    // drinkMenuImageDiv2.appendChild(myCoffees);
-    // drinkMenuImageDiv3.appendChild(myTea);
-    // drinkMenuImageDiv4.appendChild(myColdDrinks);
-
-    // // Card menu divs
-    // drinkDiv.appendChild(drinkCardMenus);
-    // drinkCardMenus.appendChild(drinkCard1);
-    // drinkCardMenus.appendChild(drinkCard2);
-    // drinkCardMenus.appendChild(drinkCard3);
-    // drinkCardMenus.appendChild(drinkCard4);
-
-    // // Cards with 2 divs
-    // drinkCard1.appendChild(drinkDescriptionDiv);
-    // drinkCard1.appendChild(drinkMenuImageDiv);
-
-    // drinkCard2.appendChild(drinkDescriptionDiv2);
-    // drinkCard2.appendChild(drinkMenuImageDiv2);
-
-    // drinkCard3.appendChild(drinkDescriptionDiv3);
-    // drinkCard3.appendChild(drinkMenuImageDiv3);
-
-    // drinkCard4.appendChild(drinkDescriptionDiv4);
-    // drinkCard4.appendChild(drinkMenuImageDiv4);
-
     const drinkObject = {
+        id: "drink",
         menuContainer,
         drinkDiv,
         drinkH2,
@@ -301,7 +221,7 @@ export default function menuContent() {
         drinkMenuImageDiv4,
     };
 
-    contentFunction(drinkObject);
+    drinkContentFunction(drinkObject);
     //============ food section ======================
 
     const foodDiv = document.createElement("div");
@@ -369,33 +289,43 @@ export default function menuContent() {
     foodDescriptionDiv.appendChild(foodName);
     foodDescriptionDiv.appendChild(foodPrice);
     foodDescriptionDiv.appendChild(foodDescription);
-    foodName.textContent = "Oleato";
-    foodPrice.textContent = "$4";
-    foodDescription.textContent = "Place holder";
+    foodName.textContent = "Bakery";
+    foodPrice.textContent = "$8";
+    foodDescription.textContent = `
+    Our bakery area is filled with the delightful aroma of freshly baked goods,
+    offering an array of delicious pastries, bread, and cakes to satisfy any sweet craving.`;
 
     // second food card
     foodDescriptionDiv2.appendChild(foodName2);
     foodDescriptionDiv2.appendChild(foodPrice2);
     foodDescriptionDiv2.appendChild(foodDescription2);
-    foodName2.textContent = "Coffee";
-    foodPrice2.textContent = "$2";
-    foodDescription2.textContent = "Place holder";
+    foodName2.textContent = "Breakfast";
+    foodPrice2.textContent = "$12";
+    foodDescription2.textContent = `
+    A wholesome and delightful morning meal,
+    consisting of various dishes such as eggs, 
+    toast, cereal, fruits, and beverages like coffee or tea.
+    `;
 
     // third card
     foodDescriptionDiv3.appendChild(foodName3);
     foodDescriptionDiv3.appendChild(foodPrice3);
     foodDescriptionDiv3.appendChild(foodDescription3);
-    foodName3.textContent = "Tea";
-    foodPrice3.textContent = "$2";
-    foodDescription3.textContent = "Place holder";
+    foodName3.textContent = "Lunch";
+    foodPrice3.textContent = "$20";
+    foodDescription3.textContent = `
+     Our midday meal that offers a variety of savory options,
+     ranging from sandwiches, salads, soups, and main courses, providing nourishment and satisfaction.`;
 
     // fourth card
     foodDescriptionDiv4.appendChild(foodName4);
     foodDescriptionDiv4.appendChild(foodPrice4);
     foodDescriptionDiv4.appendChild(foodDescription4);
-    foodName4.textContent = "Cold Drinks";
-    foodPrice4.textContent = "$5";
-    foodDescription4.textContent = "Place holder";
+    foodName4.textContent = "Special Dish";
+    foodPrice4.textContent = "$25";
+    foodDescription4.textContent = `Our special dish is one of the best meal a person could eat, forever thats how
+    that's how good it is.
+    `;
 
     // creating images
     const myBakery = new Image();
@@ -450,30 +380,4 @@ export default function menuContent() {
 
     foodCard4.appendChild(foodDescriptionDiv4);
     foodCard4.appendChild(foodMenuImageDiv4);
-
-    //============ Merchandise section ======================
-    const merchandiseDiv = document.createElement("div");
-    const merchandiseH2 = document.createElement("h2");
-    menuContainer.appendChild(merchandiseDiv);
-    merchandiseDiv.appendChild(merchandiseH2);
-    merchandiseH2.textContent = "Merchandise";
-
-    // ================= foodlist =============================
-    const merchandiseListDiv = document.createElement("div");
-    const merchandiseUl = document.createElement("ul");
-    const merchandiseList1 = document.createElement("li");
-    const merchandiseList2 = document.createElement("li");
-    const merchandiseList3 = document.createElement("li");
-    const merchandiseList4 = document.createElement("li");
-
-    merchandiseDiv.appendChild(merchandiseUl);
-    merchandiseUl.appendChild(merchandiseList1);
-    merchandiseUl.appendChild(merchandiseList2);
-    merchandiseUl.appendChild(merchandiseList3);
-    merchandiseUl.appendChild(merchandiseList4);
-
-    merchandiseList1.textContent = "Cold Cups";
-    merchandiseList2.textContent = "Mugs";
-    merchandiseList3.textContent = "Tumblers";
-    merchandiseList4.textContent = "Other";
 }
