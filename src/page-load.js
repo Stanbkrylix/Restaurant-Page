@@ -20,14 +20,19 @@ export default function pageLoad() {
     const contactContainer = document.querySelector(".contactContainer");
 
     // console.log(contactContainer);
-    menuContainer.classList.remove("hidden");
+    menuContainer.classList.add("hidden");
     contactContainer.classList.add("hidden");
-    homeContainer.classList.add("hidden");
+    homeContainer.classList.remove("hidden");
+    homeLinkBtn.classList.add("underlined");
 
     homeLinkBtn.addEventListener("click", (event) => {
         homeContainer.classList.remove("hidden");
         menuContainer.classList.add("hidden");
         contactContainer.classList.add("hidden");
+
+        homeLinkBtn.classList.add("underlined");
+        menuLinkBtn.classList.remove("underlined");
+        contactLinkBtn.classList.remove("underlined");
 
         console.log("works");
     });
@@ -36,12 +41,19 @@ export default function pageLoad() {
         homeContainer.classList.add("hidden");
         menuContainer.classList.remove("hidden");
         contactContainer.classList.add("hidden");
+
+        homeLinkBtn.classList.remove("underlined");
+        menuLinkBtn.classList.add("underlined");
+        contactLinkBtn.classList.remove("underlined");
     });
 
     contactLinkBtn.addEventListener("click", (event) => {
         homeContainer.classList.add("hidden");
         menuContainer.classList.add("hidden");
         contactContainer.classList.remove("hidden");
+
+        homeLinkBtn.classList.remove("underlined");
+        menuLinkBtn.classList.remove("underlined");
+        contactLinkBtn.classList.add("underlined");
     });
-    // console.log(homeLinkBtn);
 }

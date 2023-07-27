@@ -5,12 +5,13 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Montserrat";
 }
 #content {
-    font-family: "Montserrat";
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
 }
 .nav {
     display: flex;
@@ -33,6 +34,8 @@
     font-size: 24px;
     padding: 10px 30px;
     border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 .nav ul a:hover {
     background-color: #285430;
@@ -47,15 +50,21 @@ img {
     width: 100%;
 }
 .homeContainer {
+    text-align: center;
     width: 1000px;
     border: 1px solid black;
     padding: 20px;
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    gap: 12px;
 }
 .homeContainer h1 {
     text-align: center;
+    margin-bottom: 15px;
+}
+.homeContainer h2 {
+    margin-bottom: 5px;
 }
 
 .hoursOfOp {
@@ -70,6 +79,9 @@ img {
 }
 .hoursOfOp ul li {
     margin-bottom: 5px;
+}
+.restaurantPic {
+    margin-bottom: 15px;
 }
 
 /* ================================================================== */
@@ -94,7 +106,10 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+.cardMenuDiv p {
+    margin: 8px;
 }
 .card {
     border: 1px solid black;
@@ -124,6 +139,13 @@ img {
 }
 .contactContainer h1 {
     align-self: center;
+    margin-bottom: 8px;
+}
+.contactContainer h2 {
+    margin-bottom: 5px;
+}
+.contactContainer li {
+    margin-bottom: 3px;
 }
 .directContact {
     display: flex;
@@ -132,13 +154,15 @@ img {
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
+    gap: 10px;
 }
 
 .directContact ul {
     list-style-type: none;
 }
+
 .image-div {
-    width: 20%;
+    width: 40%;
     border-radius: 5px;
 }
 .image-div img {
@@ -163,12 +187,78 @@ img {
 }
 
 .footer {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 20px;
+}
+.footer-container {
+    width: 1000px;
     text-align: center;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+}
+.footer-container ul {
+    list-style: none;
+}
+.footer-container h2 {
+    margin-bottom: 5px;
+}
+.footer-container li {
+    margin-bottom: 2px;
 }
 
 .hidden {
     display: none;
 }
 .underlined {
-    border-bottom: solid 3px black;
+    border-bottom: solid 3px #003515;
+}
+
+@media (max-width: 1080px) {
+    #content {
+        padding: 10px;
+    }
+}
+@media (max-width: 650px) {
+    #content {
+        padding: 10px;
+    }
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: red;
+    }
+    .nav ul li {
+        margin-bottom: 30px;
+    }
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-container div {
+        margin-bottom: 10px;
+    }
+
+    .cardMenuDiv {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    }
+    .cardMenuDiv div {
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+    .directContact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .directContact .image-div {
+        width: 50%;
+    }
 }
