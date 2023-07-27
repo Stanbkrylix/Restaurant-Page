@@ -19,7 +19,6 @@ export default function pageLoad() {
     const menuContainer = document.querySelector(".menuContainer");
     const contactContainer = document.querySelector(".contactContainer");
 
-    // console.log(contactContainer);
     menuContainer.classList.add("hidden");
     contactContainer.classList.add("hidden");
     homeContainer.classList.remove("hidden");

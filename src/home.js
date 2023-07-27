@@ -27,8 +27,6 @@ export default function homeContent() {
     const locationH2 = document.createElement("h2");
     const locationP = document.createElement("p");
 
-    console.log(homePageContent);
-
     const mySteak = new Image();
     mySteak.src = steak;
     restaurantPic.appendChild(mySteak);
@@ -54,7 +52,6 @@ export default function homeContent() {
     hoursList.appendChild(listOfHours5);
     hoursList.appendChild(listOfHours6);
     hoursList.appendChild(listOfHours7);
-    // hoursList.appendChild(listOfHours6);
 
     location.appendChild(locationH2);
     location.appendChild(locationP);

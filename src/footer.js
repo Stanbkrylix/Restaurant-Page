@@ -2,7 +2,6 @@ export default function footerFunc() {
     const footer = document.querySelector(".footer");
     const container = document.createElement("div");
     container.setAttribute("class", "footer-container");
-    // const footerH2 = document.querySelector("h2");
 
     const div1 = document.createElement("div");
     const div2 = document.createElement("div");
@@ -44,9 +43,7 @@ export default function footerFunc() {
     ul3Li2.textContent = "Email";
     ul3Li3.textContent = "More email";
 
-    // footerH2.textContent = "Footer Section";
     footer.appendChild(container);
-
     container.appendChild(div1);
     container.appendChild(div2);
     container.appendChild(div3);
@@ -68,5 +65,4 @@ export default function footerFunc() {
     ul3.appendChild(ul3Li1);
     ul3.appendChild(ul3Li2);
     ul3.appendChild(ul3Li3);
-    console.log(footer);
 }

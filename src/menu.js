@@ -30,7 +30,6 @@ const drinkContentFunction = function (object) {
     object.drinkDescriptionDiv4.setAttribute("class", "descDiv");
 
     // inside of description
-
     object.drinkCard1.appendChild(object.drinkDescriptionDiv);
     object.drinkCard2.appendChild(object.drinkDescriptionDiv2);
     object.drinkCard3.appendChild(object.drinkDescriptionDiv3);
@@ -87,7 +86,6 @@ const drinkContentFunction = function (object) {
     object.myColdDrinks.src = coldDrinks;
 
     // for Image
-
     object.drinkMenuImageDiv.setAttribute("class", "menuImage");
     object.drinkMenuImageDiv2.setAttribute("class", "menuImage");
     object.drinkMenuImageDiv3.setAttribute("class", "menuImage");
@@ -122,7 +120,6 @@ const drinkContentFunction = function (object) {
 
     object.drinkCard4.appendChild(object.drinkDescriptionDiv4);
     object.drinkCard4.appendChild(object.drinkMenuImageDiv4);
-    console.log(object.drinkCardMenus);
 };
 
 export default function menuContent() {
@@ -141,7 +138,6 @@ export default function menuContent() {
     const drinkH2 = document.createElement("h2");
 
     // // ================= drinklist =============================
-    const drinkListDiv = document.createElement("div");
     const drinkCardMenus = document.createElement("div");
 
     // // cards
@@ -222,6 +218,7 @@ export default function menuContent() {
     };
 
     drinkContentFunction(drinkObject);
+
     //============ food section ======================
 
     const foodDiv = document.createElement("div");
@@ -231,7 +228,6 @@ export default function menuContent() {
     foodH2.textContent = "Food";
 
     // ================= foodlist =============================
-    const foodListDiv = document.createElement("div");
     const foodMenuDiv = document.createElement("div");
     foodMenuDiv.setAttribute("class", "cardMenuDiv");
 
@@ -292,8 +288,9 @@ export default function menuContent() {
     foodName.textContent = "Bakery";
     foodPrice.textContent = "$8";
     foodDescription.textContent = `
-    Our bakery area is filled with the delightful aroma of freshly baked goods,
-    offering an array of delicious pastries, bread, and cakes to satisfy any sweet craving.`;
+    Our bakery area is filled with the delightful aroma of 
+    freshly baked goods, offering an array of delicious pastries,
+    bread, and cakes to satisfy any sweet craving.`;
 
     // second food card
     foodDescriptionDiv2.appendChild(foodName2);
@@ -315,7 +312,8 @@ export default function menuContent() {
     foodPrice3.textContent = "$20";
     foodDescription3.textContent = `
      Our midday meal that offers a variety of savory options,
-     ranging from sandwiches, salads, soups, and main courses, providing nourishment and satisfaction.`;
+     ranging from sandwiches, salads, soups, and main courses, 
+     providing nourishment and satisfaction.`;
 
     // fourth card
     foodDescriptionDiv4.appendChild(foodName4);
@@ -323,8 +321,9 @@ export default function menuContent() {
     foodDescriptionDiv4.appendChild(foodDescription4);
     foodName4.textContent = "Special Dish";
     foodPrice4.textContent = "$25";
-    foodDescription4.textContent = `Our special dish is one of the best meal a person could eat, forever thats how
-    that's how good it is.
+    foodDescription4.textContent = `
+    Our special dish is one of the best meal a person could eat,
+    forever thats how that's how good it is.
     `;
 
     // creating images
